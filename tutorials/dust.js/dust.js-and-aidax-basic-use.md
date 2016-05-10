@@ -15,9 +15,9 @@ Dust.js is the default templating engine used by AIDAX. This document gives an o
 ###Objective in Webhook Template
 The user has access to three objects: root, visitor_goals, attributes.
 
- - root
-It contains the properties of the profile root event.
- - visitor_goals
-The visitor's goals target webhook.
- - attributes
-The attributes of the visitor target webhook.
+ - root  
+It contains the properties of the profile root event.   
+ - visitor_goals  
+The visitor's goals target webhook.  
+ - attributes  
+The attributes of the visitor target webhook.  
