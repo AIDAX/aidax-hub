@@ -126,9 +126,9 @@ The variables are rendered only **if there is no spacing** between `{}`. If ther
 ###Dynamic variables in Webhook Template
 The template has access to three objects: `root`, `visitor_goals` and `attributes`.
 
- * `root`: It contains the properties of the profile root event.   
- * `visitor_goals`: The goals of visitor target of the webhook .   
- * `attributes`: The attributes of visitor target of the webhook.   
+ * `root`: It contains the properties of the profile root event    
+ * `visitor_goals`: The goals of visitor target of the webhook   
+ * `attributes`: The attributes of visitor target of the webhook    
 
 ##References
 
