@@ -82,8 +82,8 @@ multiline comments !}
 - `@select`: Take one action based on multiple comparisons with a single key value
 - `@none`:  What to do if none of the conditions are true
 - `@any`: Run if any of the conditions are true
-How use
-```javascript
+
+```
 <span class="
   {@select key=testEnabled}
     {@any}test-enabled {/any}
@@ -153,19 +153,13 @@ A special is converted to a special character
 ###About Variables
 The variables are rendered only **if there is no spacing** between `{}`. If there is space, it will be rendered as a text.  
 
-*Example:*   
-
-In Case(1), `atributes.email` is a variable.
-
- - Case(1)  
+ - Case(1), `atributes.email` is a variable:
 
 	```javascript
     var variable: "{attributes.email}"	
 	```
-
-In Case(2), `atributes.email` is a text.
-
- - Case(2)  
+	
+ - Case(2), `atributes.email` is a text:  
  
 	```javascript
 	var text: "{ attributes.email }"  
