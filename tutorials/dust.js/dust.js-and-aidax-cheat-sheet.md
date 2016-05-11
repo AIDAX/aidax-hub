@@ -50,7 +50,7 @@ multiline comments !}
 ####**`{@helper/}`**   
 
 ```javascript
-{@eq key=email value="contact@aidax.com.br"}
+{@eq key=attributes.email value="contact@aidax.com.br"}
   This e-mail belongs to AIDAX
 {:else}
   This is a new e-mail.
@@ -71,12 +71,6 @@ multiline comments !}
 ```javascript
 {@eq key=foo value="50" type="number"} Casting value {/eq}
 ```
-#####**Separator Helper (Loop)**  
-
- - `{@sep}`: Output for every loop iteration except the last
- - `{@first}`: Output only on the first loop iteration
- - `{@last}`: Only output on the last loop iteration
-
 #####**Select Helper (Switch-like)**  
 
 - `@select`: Take one action based on multiple comparisons with a single key value
@@ -104,42 +98,6 @@ multiline comments !}
    {@eq value="0" type="number"} class="foo"{/eq}
 {/math}
 ```
-#####**Debugging with `@contextDump`**  
-
- - `{@contextDump}`: Helper outputs the current context portion of the JSON data model to the output 
- - `key="full"` or `"current"`: Print the context
- - `to="console"` or `"output"`: Print to the console or output stream
-
-```javascript
-{#foo}
-  {! Default: key="current" and to="output" !}
-  {@contextDump/}
-  {! Check your console for the full context !}
-  {@contextDump key="full" to="console"/}
-{/foo}
-```
-
-####**`{>partial/}`**  
-Include one dust template inside of another dust template.
-```javascript
-{> my_template /}
-```
-
-####**Blocks: `{+partial}`**  
-Pre-define several blocks in the common base template, and then override certain blocks as necessary.  
-
-```javascript
-{+classNames} "Hello" {/classNames} "world!"
-```
-
-####**Block Overrides:`{<inline-partial/}`**   
-Can override the default header block in a child template like this:
-
-```javascript
-{+classNames} "Hello" {/classNames} "world!"
-{<classNames} "By" {/classNames}
-```
-
 ####**`{~special}`**  
 A special is converted to a special character  
 
