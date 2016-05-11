@@ -79,11 +79,11 @@ multiline comments !}
 
 ```
 <span class="
-  {@select key=testEnabled}
-    {@any}test-enabled {/any}
-    {@none}test-disabled {/none}
-    {@eq value="email"}test-email{/eq}
-    {@eq value="name"}test-name{/eq}
+  {@select key=attributes.gender}
+    {@any}has gender specified{/any}
+    {@none}no gender specified {/none}
+    {@eq value="M"}male{/eq}
+    {@eq value="F"}female{/eq}
   {/select}
 ">
 ```
@@ -123,8 +123,8 @@ The variables are rendered only **if there is no spacing** between `{}`. If ther
 	var text: "{ attributes.email }"  
 	```  
 	  	
-###Objective in Webhook Template
-The user has access to three objects: `root`, `visitor_goals` and `attributes`.
+###Dynamic variables in Webhook Template
+The template has access to three objects: `root`, `visitor_goals` and `attributes`.
 
  * `root`: It contains the properties of the profile root event.   
  * `visitor_goals`: The goals of visitor target of the webhook .   
