@@ -80,8 +80,8 @@ multiline comments !}
 ```
 <span class="
   {@select key=attributes.gender}
-    {@any}has gender specified{/any}
-    {@none}no gender specified {/none}
+    {@any}has-gender-specified{/any}
+    {@none}no-gender-specified {/none}
     {@eq value="M"}male{/eq}
     {@eq value="F"}female{/eq}
   {/select}
