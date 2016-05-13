@@ -1,4 +1,4 @@
-[![AIDAX logo](https://raw.githubusercontent.com/astfarias/aidax/master/files/logo/logo2-less.png)](http://aidaxbi.com/)
+[![AIDAX logo](https://raw.githubusercontent.com/astfarias/aidax/master/files/img/logo/logo2-less.png)](http://aidaxbi.com/)
 ##Why Four Types of Capture and How Use
 
 os Eventos não podem ser atualizados, é "fire-and-forget"

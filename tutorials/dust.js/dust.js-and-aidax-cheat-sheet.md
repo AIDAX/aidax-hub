@@ -1,4 +1,4 @@
-[![AIDAX logo](https://raw.githubusercontent.com/astfarias/aidax/master/files/logo/logo2-less.png)](http://aidaxbi.com/)
+[![AIDAX logo](https://raw.githubusercontent.com/astfarias/aidax/master/files/img/logo/logo2-less.png)](http://aidaxbi.com/)
 ##Dust.js 2.x - Cheat Sheet with AIDAX
 >*"Dust.js is a safe template engine with a great degree of flexibility, allowing you to easily customize webhook actions."*
 >**Alisson Agiani - AIDAX CTO**
