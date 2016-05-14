@@ -6,10 +6,10 @@ We identify instances where the user wants to track a goal/target per visitor/se
 
 AIDAX provides four types of capture:  
 
-- Goal
-- Attribute
-- Event
-- Transaction
+- [Goal](https://github.com/AIDAX/aidax/blob/master/tutorials/aidax/why-four-types-of-capture.md#goal)
+- [Attribute](https://github.com/AIDAX/aidax/blob/master/tutorials/aidax/why-four-types-of-capture.md#attribute)
+- [Event](https://github.com/AIDAX/aidax/blob/master/tutorials/aidax/why-four-types-of-capture.md#event)
+- [Transaction](https://github.com/AIDAX/aidax/blob/master/tutorials/aidax/why-four-types-of-capture.md#transaction)
 
 
 Let's talk about each one and show how to use.
@@ -107,6 +107,8 @@ ax.charge(2.50, true, { name: "Kit-Kat", $tags: "candy"});
 >
  - Captured information even if it is anonymous visitor  
  - All this information is also available for targeting in metric and profiles  
+
+If you want to know how our system works under the hood, visit [Project session.](https://github.com/AIDAX/aidax/wiki/Project)
 
 ----------
 ##References
