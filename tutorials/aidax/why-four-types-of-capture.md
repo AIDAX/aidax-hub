@@ -1,5 +1,5 @@
-[![AIDAX logo](https://raw.githubusercontent.com/astfarias/aidax/master/files/img/logo/logo2-less.png)](http://aidaxbi.com/)
-##Why Four Types of Capture and How Use
+[![AIDAX logo](https://raw.githubusercontent.com/astfarias/aidax/master/files/img/logo/logo2-less.png)](http://aidaxbi.com/) 
+## Why Four Types of Capture and How Use  
 
 Different types of capture remove user-AIDAX responsibility to prevent the registration of the same event multiple times.  
 We identify instances where the user wants to track a goal/target per visitor/session, so we created these and other possibilities.  
@@ -15,27 +15,27 @@ AIDAX provides four types of capture:
 Let's talk about each one and show how to use.
 
 ----------
-###Goal
+### Goal 
 
 **Goal** track visitor actions. This action may be the completion of a task, a subscription or visit a session page as the Checkout page. All that can be considered a "goal".   
 
 Goals can be recorded once a **Visitor** or once per **Session**.    
->**Note:**
+>**Note:**  
 >
-> - What differentiates syntactically is the value of last attribute: Visitor (`true`), Session (`false`)
-> - Successive recordings overwrite the current value  
+> - What differentiates syntactically is the value of last attribute: Visitor (`true`), Session (`false`)   
+> - Successive recordings overwrite the current value    
 
 
-####Visitor Goal
+#### Visitor Goal  
 
-You can see the Visitors Goals as task completed by the visitor. As an email subscription.  
+You can see the Visitors Goals as task completed by the visitor. As an email subscription.   
 
 ```javascript
 //Email Subscription
 ax.goal("subscription", true, true);
 ```
 
-####Session Goal
+#### Session Goal  
 You can see the Visitors Goals as checkpoints completed by the visitor. As the arrival the Checkout page.   
 
 ```javascript
@@ -43,7 +43,7 @@ You can see the Visitors Goals as checkpoints completed by the visitor. As the a
 ax.goal("submit_checkout_form", true, false);
 ```
 ----------
-###Attribute
+### Attribute  
 
 Attributes are visitor properties, such as their name and gender.  
 
@@ -51,37 +51,37 @@ Attributes are visitor properties, such as their name and gender.
 //Attributing gender to visitor
 ax.identify({gender: "M"});
 ```
->**Note:** 
+>**Note:**  
 >
-> - The attributes are linked to the current visitor, successive recordings subscribe the current value  
+> - The attributes are linked to the current visitor, successive recordings subscribe the current value   
 
 ----------
-###Event
-Event is an case not necessarily performed by the visitor and can be accounted. As a page view.  
+### Event  
+Event is an case not necessarily performed by the visitor and can be accounted. As a page view.   
 ```javascript
 //Event of page viewed 
 ax.track("pageview",{title: "Home"});
 ```
->**Note:** 
+>**Note:**  
 >
 > - Events can not be updated, are "fire-and-forget"   
 > - It can be inserted several times  
 
 ----------
-###Transaction
+### Transaction  
 
 Transaction is a specialized event. Its main differences are the possibility of update and context to facilitate targeting. For this, the totals transaction are recorded as visitor attribute also transaction status storage.    
 ```javascript
 //Transaction of a Kit-Kat ($2.50)
 ax.charge(2.50, true, { name: "Kit-Kat", $tags: "candy"});
 ```
->**Note:** 
+>**Note:**  
 >
 > - Transaction can be updated
 > - It can be inserted several times
 
 ----------
-##Considerations
+## Considerations  
 
  1. The types are abstractions that depend on the need and interpretation of AIDAX user.  
  2. Everything is linked to the current visitor either anonymous or identified by email, SSN, ID number, or any other identifier.
@@ -90,7 +90,7 @@ ax.charge(2.50, true, { name: "Kit-Kat", $tags: "candy"});
  5. If ID is a email, the AIDAX user can use our Actionable Analytics using Webhook.
 
     
-####Standard Information Captured
+#### Standard Information Captured  
 
 - Geolocation
 - Weather forecast based on geo-coordinates
@@ -111,6 +111,6 @@ ax.charge(2.50, true, { name: "Kit-Kat", $tags: "candy"});
 If you want to know how our system works under the hood, visit [Project session.](https://github.com/AIDAX/aidax/wiki/Project)
 
 ----------
-##References
+## References  
 
 [Full AIDAX Documentation](http://doc.aidax.com.br/)  
