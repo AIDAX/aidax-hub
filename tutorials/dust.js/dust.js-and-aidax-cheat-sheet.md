@@ -1,16 +1,16 @@
 [![AIDAX logo](https://raw.githubusercontent.com/astfarias/aidax/master/files/img/logo/logo2-less.png)](http://aidaxbi.com/)
-##Dust.js 2.x - Cheat Sheet with AIDAX
+## Dust.js 2.x - Cheat Sheet with AIDAX
 >*"Dust.js is a safe template engine with a great degree of flexibility, allowing you to easily customize webhook actions."*
 >**Alisson Agiani - AIDAX CTO**
 
-###Overview
+### Overview
 Dust.js is the default templating engine used by AIDAX. This document gives an overview of the templating language syntax in your AIDAX views.
 
 > The official Dust.js documentation can be found in http://www.dustjs.com/.
 
-##Syntax  
+## Syntax  
 
-####**`{reference}`**   
+#### **`{reference}`**   
 Insert values from your context (or JSON data) into your template.
 To reference keys in the view, surround the key name in brackets like this: `{key}`  
 
@@ -18,14 +18,14 @@ To reference keys in the view, surround the key name in brackets like this: `{ke
  - Dust key: One or more of the following characters: `a-z`, `A-Z`, `_` (underscore), `$`, `0-9`, or `-`
 >Note: If there is space between `{}`, it will be rendered as a text.  
 
-####**`{! comments !}`**  
+#### **`{! comments !}`**  
 
 ```javascript
 {! All Dust comments are
 multiline comments !}
 ```  
 
-####**`{#section/}`**  
+#### **`{#section/}`**  
 
 ```javascript
 {#key}
@@ -35,19 +35,19 @@ multiline comments !}
 {/key}
 ```  
 
-####**`{?exists/}`**  
+#### **`{?exists/}`**  
 
 ```javascript
 {?key}"Show if key exist!"{:else}"Else show this"{/key}
 ```
 
-####**`{^not-exists/}`**  
+#### **`{^not-exists/}`**  
 
 ```javascript
 {^key}"Show if key does not exist"{:else}"Else show this"{/isReady}
 ```
 
-####**`{@helper/}`**   
+#### **`{@helper/}`**   
 
 ```javascript
 {@eq key=attributes.email value="contact@aidax.com.br"}
@@ -58,7 +58,7 @@ multiline comments !}
 
 ```
 
-#####**Logic Helpers**   
+##### **Logic Helpers**   
 
  - `{@eq}`: Strictly equal to
  - `{@ne}`: Not strictly equal to
@@ -67,11 +67,11 @@ multiline comments !}
  - `{@gte}`: Greater than or equal to
  - `{@lte}`: Less than or equal to
 
-#####**Casting**
+##### **Casting**
 ```javascript
 {@eq key=foo value="50" type="number"} Casting value {/eq}
 ```
-#####**Select Helper (Switch-like)**  
+##### **Select Helper (Switch-like)**  
 
 - `@select`: Take one action based on multiple comparisons with a single key value
 - `@none`:  What to do if none of the conditions are true
@@ -87,7 +87,7 @@ multiline comments !}
   {/select}
 ">
 ```
-#####**Math Helper**  
+##### **Math Helper**  
 
 - `{@math}`: Perform simple math operations
 -  It accepts `key` and `method` parameters as well as an `operand` parameter for operations that require two values, like adding or subtracting.
@@ -98,7 +98,7 @@ multiline comments !}
    {@eq value="0" type="number"} class="foo"{/eq}
 {/math}
 ```
-####**`{~special}`**  
+#### **`{~special}`**  
 A special is converted to a special character  
 
  - `{~s}` becomes a single space
@@ -108,7 +108,7 @@ A special is converted to a special character
  - `{~rb}` becomes a right curly brace `}`
 
 
-###About Variables
+### About Variables
 The variables are rendered only **if there is no spacing** between `{}`. If there is space, it will be rendered as a text.  
 
  - Case(1), `atributes.email` is a variable:
@@ -123,14 +123,14 @@ The variables are rendered only **if there is no spacing** between `{}`. If ther
 	var text: "{ attributes.email }"  
 	```  
 	  	
-###Dynamic variables in Webhook Template
+### Dynamic variables in Webhook Template
 The template has access to three objects: `root`, `visitor_goals` and `attributes`.
 
  * `root`: It contains the properties of the profile root event    
  * `visitor_goals`: The goals of visitor target of the webhook   
  * `attributes`: The attributes of visitor target of the webhook    
 
-##References
+## References
 
 * [Dust.js doc](http://www.dustjs.com/docs/)
 * [Mobify doc](http://adaptivejs.mobify.com/v2.0/docs/)
